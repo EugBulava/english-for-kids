@@ -1,0 +1,36 @@
+{
+  "name": "englishforkids-webpack",
+  "version": "1.0.0",
+  "description": "webpack project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production", 
+    "lint" : "eslint ./src/index.js",
+    "lint-modules" : "eslint ./src/modules",
+    "lint-modules:fix" : "eslint ./src/modules --fix",
+    "lint:fix": "eslint ./src/index.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EugBulava/english-for-kids.git"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "webpack"
+  ],
+  "author": "Yauheni Bulava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EugBulava/english-for-kids/issues"
+  },
+  "homepage": "https://github.com/EugBulava/english-for-kids#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

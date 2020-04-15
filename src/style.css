@@ -1,5 +1,4 @@
 body{
-    height: 100vh;
     margin: 0;
     font-family: 'Gloria Hallelujah', cursive;
 }
@@ -10,12 +9,14 @@ body{
     align-items: center;
 }
 
-.container{
+.container,
+.card-block{
     display: flex;
     height: 70%;
 }
 
-.category{
+.category,
+.card{
     display: inline-block;
     width: 230px;
     height: 230px;
@@ -36,13 +37,16 @@ body{
     color: #fff;
 }
 
-.category:hover{
+.category:hover,
+.card:hover{
+    cursor: pointer;
     box-shadow: 0 20px 20px 0 rgba(0,0,0,.16), 0 20px 20px 0 rgba(0,0,0,.12);
     transition: 0.3s;
 }
 
 
-.category img{
+.category img,
+.card img{
     margin-top: 20px;
     margin-left: 45px;
     width: 130px;
@@ -51,11 +55,25 @@ body{
     border: 2px solid black;
 }
 
-.name-of-category{
+.card img{
+    margin-top: 3px;
+    margin-left: 0;
+    width: 230px;
+    height: 139px;
+    border-radius: 0;
+    border: none;
+}
+
+.name-of-category,
+.name-of-card{
     display: block;
     font-size: 30px;
     padding-top: 20px;
     text-align: center;
+}
+
+.name-of-card{
+    padding-top: 0;
 }
 
 .categories{
@@ -63,7 +81,6 @@ body{
 }
 
 .wrapper{
-    height: 100%;
     width: 70%;
     margin: auto;
 }
@@ -73,7 +90,7 @@ body{
     float: right;
     margin-top: 3vh;
     margin-right: 2vw;
-    width: 140px;
+    width: 150px;
     height: 50px;
     color: #fff;
     font-size: 25px;
@@ -83,27 +100,40 @@ body{
     border: 2px solid #eee;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .mode-text{
     margin-left: 3px;
-    cursor: default;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-.mode-text::selection {
+.mode-text-play{
+    
+    transition: 0.5s;
+}
+
+.mode-text::selection ,
+.nav-li a::selection,
+.mode-text::selection,
+.mode-text-play::selection{
     background: transparent;
  }
 
 .toggle-switch{
     position: relative;
     display: inline-block;
-    float: right;
+    white-space: nowrap;
     margin-top: 7px;
     margin-right: 7px;
     height:35px;
     width: 35px;
     background-color: #f9f9f9;
     border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .toggle-switch::after{
@@ -123,11 +153,12 @@ body{
 .burger-button{
     position: relative;
     display: inline-block;
+    cursor: pointer;
     height: 50px;
     width: 50px;
+    border-radius: 50%;
     margin-left: 2vw;
     margin-top: 3vh;
-    background-color: #fff;
 }
 
 .burger-button span,
@@ -138,10 +169,17 @@ body{
     left: 50%;
     margin-top: -2px;
     margin-left: -16.5px;
-    width: 33px;;
+    width: 33px;
     height: 4px;
     border-radius: 3px;
-    background-color: #cdcdcd;;
+    background-color: #cdcdcd;
+    transition: 0.4s;
+}
+
+.active-burger-button span{
+    transition: 0.4s;
+    width: 0px;
+    margin-left: 0;
 }
 
 .burger-button span::after,
@@ -156,3 +194,70 @@ body{
 .burger-button span::after{
     transform: translateY(8px);
 }
+
+.active-burger-button span::after{
+    transform: rotate(45deg);
+    transition: 0.4s;
+}
+
+.active-burger-button span::before{
+    transform: rotate(-45deg);
+    transition: 0.4s;
+}
+
+.burger-menu{
+    position: fixed;
+    margin-left: -30vw;
+    width: 30vw;
+    height: 100vh;
+    background: linear-gradient(40deg,#00bf82,#0099ae); 
+    transition: 0.8s;
+}
+
+.nav{
+    margin-top: 20vh;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.nav li{
+    font-size: 25px;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.nav li a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav li a:hover{
+    text-decoration: underline;
+    color: yellowgreen;
+}
+
+.active-burger-menu{
+    margin-left: 0;
+    transition: 0.8s;
+}
+
+.nav-li .active-link-menu{
+    color: red;
+    text-decoration: underline;
+}
+
+.active-switch-text{
+    margin-left: -93px;
+    transition: 0.5s;
+}
+
+.play-mode-color{
+    background: linear-gradient(40deg,#ffd86f,#fc6262);
+}
+
+.hidden{
+    display: none;
+}
+
+
+

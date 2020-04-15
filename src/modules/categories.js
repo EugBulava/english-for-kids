@@ -1,8 +1,9 @@
 class Categories {
   constructor(options) {
-    this.name = options.name;
+    this.title = options.title;
     this.urlImg = options.urlImg;
     this.id = options.id;
+    this.name = options.name;
     this.href = 'cards.html';
     this.class = 'category';
   }
@@ -10,49 +11,57 @@ class Categories {
 
 const categories = {
   actionA: new Categories({
-    name: 'Action (set A)',
+    name: 'actionA',
+    title: 'Action (set A)',
     urlImg: 'img/dance.jpg',
     id: 0,
   }),
 
   actionB: new Categories({
-    name: 'Action (set B)',
+    name: 'actionB',
+    title: 'Action (set B)',
     urlImg: 'img/swim.jpg',
     id: 1,
   }),
 
   actionC: new Categories({
-    name: 'Action (set C)',
+    name: 'actionC',
+    title: 'Action (set C)',
     urlImg: 'img/drop.jpg',
     id: 2,
   }),
 
   adjective: new Categories({
-    name: 'Adjective',
+    name: 'adjective',
+    title: 'Adjective',
     urlImg: 'img/friendly.jpg',
     id: 3,
   }),
 
   animalA: new Categories({
-    name: 'Animal (set A)',
+    name: 'animalA',
+    title: 'Animal (set A)',
     urlImg: 'img/cat.jpg',
     id: 4,
   }),
 
   animalB: new Categories({
-    name: 'Animal (set B)',
+    name: 'animalB',
+    title: 'Animal (set B)',
     urlImg: 'img/bird.jpg',
     id: 5,
   }),
 
   clothes: new Categories({
-    name: 'Clothes',
+    name: 'clothes',
+    title: 'Clothes',
     urlImg: 'img/blouse.jpg',
     id: 6,
   }),
 
   emotion: new Categories({
-    name: 'Emotion',
+    name: 'emotion',
+    title: 'Emotion',
     urlImg: 'img/smile.jpg',
     id: 7,
   }),
